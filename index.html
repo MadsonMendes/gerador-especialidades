@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <p class="header-link" onclick="especialidade()">Gerar</p>
+                <a class="header-link">Repositório</a>
+                <a class="header-link">API</a>
+                <a class="header-link">Sobre</a>
+                
+            </nav>
+        </header>
+        <div class="hero-container">
+            <div class="hero-infos">
+            <p id="betawarn">BETA!</p>
+            <h1 id="hero-header">Encontre uma <a href="https://escoteiros.org.br/especialidades/" id="hero-ee">especialidade escoteira</a> aleatória de forma rápida e dinâmica!</h1>
+            <p id="hero-text">Um website de <a id="hero-github">código-aberto</a> que utiliza da <a href="https://especialidade.netlify.app/especialidades.json" id="hero-api">API de Especialidades</a> para entregar o resultado.</p>
+            </div>
+        </div>
+        <div class="es-container">
+            <h2>Sua especialidade será a de
+            <h2 id="es-nome"></h2>
+            </h2>
+            <div id="es-requisitos"></div>
+            <button class= "es-genbutton" onclick="especialidade()">Iniciar gerador!</button>
+        </div>
+    </div>
+    <footer>
+        <p id="footer-credits">Feito com <i class="fa fa-heart" aria-hidden="true"></i> por Madson, sênior do <a class="footer-link" href="https://www.instagram.com/escoteirosjequitiba/">Grupo de Escoteiros Jequitibá - 52º BA</a>.</p>
+        <p>Dúvidas, sugestões ou bugs? Envie <a class="footer-link" href="mailto:madson.mendes@escoteiros.org.br">um e-mail para mim</a> explicando a situação e eu resolverei o mais rápido possível.</p> 
+        <p>Este site não possui ligação com a União dos Escoteiros do Brasil.</p> 
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

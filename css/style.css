@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Variáveis e alterações globais */
+:root{
+    --background-main: #282A36;
+    --background-second: #44475A;
+    --background-third: #121318;
+    --text: #F8F8F2;
+    --green: #50FA7B;
+    --green-hover: #85fca3;
+
+    --orange: #FFB86C;
+
+    --blue: #8BE9FD;
+    --blue-hover: #aef0fe;
+
+    --red: #FF5555;
+
+    --gradient-1: linear-gradient(315deg, #50FA7B 50%, #8BE9FD 100%);
+    --gradient-2: linear-gradient(315deg, #FF79C6 50%, #BD93F9 100%);
+    --gradient-3: linear-gradient(-45deg, #8BE9FD 30%, #BD93F9 100%);
+    --gradient-4: linear-gradient(315deg, #FFB86C 0%, #FF5555 100%);
+
+
+}
+
+body{
+background: var(--background-main);
+margin: 0 0;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.es-container, .hero-container, footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-container{
+    padding-top: 5vh;
+    height: 60vh;
+    width: 100%;
+    background: var(--background-second);
+    padding-bottom: 5vh;
+
+}
+/*
+----
+HEADER
+----
+*/
+
+header{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+
+}
+
+.header-link{
+    font: 600 1.1em "Ubuntu", sans-serif;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-image: linear-gradient(315deg, var(--text)50%,  var(--text)100%);
+    text-align: center;
+    padding: 0 1em;
+    text-decoration: none;
+    transition: ease-in-out 0.25s;
+
+
+
+}
+.header-link:hover{
+    font: 600 1.3em "Ubuntu", sans-serif;
+    transition: ease-in-out 0.25s;
+    background-image: var(--gradient-1)
+
+}
+.header-link:nth-child(2):hover {
+    background-image: var(--gradient-2)
+}
+.header-link:nth-child(3):hover {
+    background-image: var(--gradient-3)
+}
+.header-link:nth-child(4):hover {
+    background-image: var(--gradient-4)
+}
+/*
+----
+ABERTURA DA PÁGINA
+----
+*/
+.hero-infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+h1{
+    font: 600 3em "Crimson Pro", serif;
+    color: var(--text);
+    text-align: center;
+}
+
+/* Link Especialidades Escoteiras*/
+
+a#hero-ee{
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-image: var(--gradient-1);
+    text-decoration: none;
+
+}
+a#hero-ee:hover{
+    filter: brightness(115%);
+    cursor: pointer;
+}
+/* Texto inicial */
+
+p#hero-text{
+    font: 400 1.1em "Ubuntu", sans-serif;
+    color: var(--text);
+    text-align: center;
+
+}
+/* Link do repositório no texto inicial */
+
+#hero-github{
+    font: 600 1.1em "Ubuntu", sans-serif;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-image: var(--gradient-4);
+    text-decoration: none;
+}
+#hero-github:hover{
+    filter: brightness(115%);
+    cursor: pointer;
+}
+
+/* Link da API no texto inicial */
+
+
+#hero-api{
+    font: 600 1.1em "Ubuntu", sans-serif;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-image: var(--gradient-2);
+    text-decoration: none;
+}
+#hero-api:hover{
+    filter: brightness(115%);
+    cursor: pointer;
+}
+
+/* Aviso de Beta */
+
+#betawarn{
+    font: 600 0.75em "Ubuntu", sans-serif;
+    color: var(--text);
+    background-color: #FF5555;
+    padding: 0.5em;
+    margin-bottom: -3em;
+}
+
+
+/*
+----
+GERADOR DE ESPECIALIDADES
+----
+*/
+
+
+/* H2 */
+
+h2{
+    font: 600 2em "Crimson Pro", serif;
+    color: var(--text);
+
+}
+h2#es-nome{
+    margin-top: -0.5em;
+    font: 800 2.25em "Crimson Pro", serif;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-image: var(--gradient-1);
+}
+
+/* Requisitos */
+
+#es-requisitos{
+    color: var(--text);
+    width: 45%;
+    line-height: 150%;
+}
+
+/* Requisitos não escolhidos */
+
+p.es-reqs{
+    font: 400 1.1em "Ubuntu", sans-serif;
+    padding: 0.4em 1em;
+    border-radius: 7px;
+    background-color: var(--background-main);
+    transition: ease-in-out 0.25s;
+
+
+}
+
+p.es-reqs:hover{
+    transition: ease-in-out 0.25s;
+    background-color: var(--background-second);
+}
+
+/* Requisitos escolhidos */
+
+p.es-reqs-chosen{
+    color: #282A36;
+    font: 500 1.1em "Ubuntu", sans-serif;
+    padding: 0.4em 1em;
+    border-radius: 7px;
+    background: var(--green);
+    transition: ease-in-out 0.25s;
+}
+p.es-reqs-chosen:hover{
+    transition: ease-in-out 0.25s;
+    background: var(--green-hover);
+}
+
+/* Botões */
+
+.es-genbutton{
+    font: 500 1.1em "Ubuntu", sans-serif;
+    color: #14151b;
+    border: none;
+    border-radius: 7px;
+    padding: 0.7em 1.75em;
+    background: var(--gradient-3);
+    transition: ease-in-out 0.25s;
+
+}
+.es-genbutton:hover{
+    transition: ease-in-out 0.25s;
+    cursor: pointer;
+    filter: brightness(110%);
+    box-shadow: 0em 0.5em var(--background-second);
+
+}
+.es-genbutton:active{
+    transform: translateY(0.5em);
+    box-shadow: 0em 0em var(--background-second);
+}
+
+/*
+----
+FOOTER
+----
+*/
+footer{
+    margin-top: 10vh;
+    padding-top: 2vh;
+    width: 100%;
+    background-color: var(--background-third);
+
+}
+footer > p{
+
+    font: 400 1.1em "Ubuntu", sans-serif;
+    color: #6272A4;
+    padding: 0.4em 1em;
+    border-radius: 7px;
+    margin: 0 0;
+
+}
+
+.fa-heart{
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-image: var(--gradient-2);
+    transition: ease-in-out 0.25s;
+    font-size: 1.1em;
+}
+.fa-heart:hover{
+    transition: ease-in-out 0.25s;
+    font-size: 1.3em;
+
+}
+.footer-link {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-image: var(--gradient-1);
+    text-decoration: none;
+    text-align: center;
+
+}
